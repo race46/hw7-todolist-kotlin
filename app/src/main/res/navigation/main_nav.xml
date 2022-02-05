@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.myapplication.fragment.main"
+        android:label="main" >
+        <action
+            android:id="@+id/action_main_to_add2"
+            app:destination="@id/add2" />
+        <action
+            android:id="@+id/action_main_to_update"
+            app:destination="@id/update" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.myapplication.fragment.add"
+        android:label="add" />
+    <fragment
+        android:id="@+id/update"
+        android:name="com.example.myapplication.fragment.update"
+        android:label="update" >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
